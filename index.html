@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An engineering project exploring adaptive triathlon training plans with C# and .NET.">
+  <title>Adaptive Triathlon Planner</title>
+  <style>
+    :root {
+      --navy: #102b40;
+      --teal: #78d9cb;
+      --paper: #f5f7fa;
+      --ink: #203040;
+      --muted: #607080;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 76px 24px 64px;
+    }
+
+    .container {
+      width: min(100%, 960px);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(2.4rem, 6vw, 4.3rem);
+      line-height: 1.12;
+      margin: 16px 0;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: #d8e8f0;
+      font-size: 1.1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .tag {
+      border: 1px solid #547184;
+      border-radius: 999px;
+      padding: 5px 13px;
+      font-size: 0.88rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      margin: 8px 8px 0 0;
+    }
+
+    .button-primary {
+      background: var(--teal);
+      color: var(--navy);
+    }
+
+    .button-secondary {
+      border: 1px solid #8aa0af;
+      color: var(--white);
+    }
+
+    main { padding: 24px; }
+
+    section { padding: 30px 0; }
+
+    h2 {
+      font-size: 1.8rem;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid #e0e7ed;
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .status {
+      color: #526b7a;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .steps {
+      padding-left: 24px;
+    }
+
+    .steps li { margin-bottom: 12px; }
+
+    .notice {
+      background: #e5f4f1;
+      border-left: 4px solid #298c7c;
+      border-radius: 4px;
+      padding: 16px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #d8e8f0;
+      text-align: center;
+      padding: 26px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding-top: 52px; }
+      .grid { grid-template-columns: 1fr; }
+      main { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Biomedical Engineering · Personal Project</div>
+      <h1>Adaptive Triathlon Training Planner</h1>
+      <p>
+        Exploring how software can help triathletes organize training
+        around their goals, weekly availability, and recovery needs.
+      </p>
+
+      <div class="tags">
+        <span class="tag">C#</span>
+        <span class="tag">.NET</span>
+        <span class="tag">Software Engineering</span>
+        <span class="tag">Triathlon</span>
+      </div>
+
+      <a class="button button-primary"
+         href="#project">Explore the project</a>
+      <a class="button button-secondary"
+         href="https://github.com/cheyenne_biederman/adaptive-triathlon-planner"
+         target="_blank" rel="noopener noreferrer">
+        View source code ↗
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="project">
+      <div class="eyebrow">01 / Overview</div>
+      <h2>The project</h2>
+      <p class="section-intro">
+        Triathlon training involves balancing three sports, personal
+        schedules, and recovery. This project explores a software-based
+        approach to generating structured training plans and adjusting
+        them when circumstances change.
+      </p>
+
+      <div class="notice">
+        <strong>Current status:</strong> In development. Features below
+        describe the project goals, not completed or validated capabilities.
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="eyebrow">02 / Design goals</div>
+      <h2>Planned features</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="status">Planned feature 01</div>
+          <h3>Athlete profile</h3>
+          <p>Represent an athlete's experience, goals, and available time.</p>
+        </article>
+        <article class="card">
+          <div class="status">Planned feature 02</div>
+          <h3>Weekly scheduling</h3>
+          <p>Organize swim, bike, and run sessions around weekly commitments.</p>
+        </article>
+        <article class="card">
+          <div class="status">Planned feature 03</div>
+          <h3>Adaptive planning</h3>
+          <p>Explore transparent rules for adjusting a schedule when sessions are missed.</p>
+        </article>
+        <article class="card">
+          <div class="status">Planned feature 04</div>
+          <h3>Automated testing</h3>
+          <p>Test scheduling constraints, invalid inputs, and plan-generation rules.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="engineering">
+      <div class="eyebrow">03 / Engineering</div>
+      <h2>Technical approach</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>C# and .NET</h3>
+          <p>Build modular, maintainable training-plan logic.</p>
+        </article>
+        <article class="card">
+          <h3>Testing and validation</h3>
+          <p>Use automated tests to check expected behavior and edge cases.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="eyebrow">04 / Development</div>
+      <h2>Project roadmap</h2>
+      <ol class="steps">
+        <li>Define requirements and training data models.</li>
+        <li>Build the core plan-generation logic.</li>
+        <li>Write and run automated tests.</li>
+        <li>Develop the web interface.</li>
+        <li>Implement and evaluate adaptation rules.</li>
+        <li>Document the results and known limitations.</li>
+      </ol>
+    </section>
+
+    <section id="code">
+      <div class="eyebrow">05 / Source code</div>
+      <h2>Follow the development</h2>
+      <p class="section-intro">
+        Explore the repository for the source code, documentation,
+        tests, and ongoing development.
+      </p>
+      <a class="button button-primary"
+         href="https://github.com/cheyenne_biederman/adaptive-triathlon-planner"
+         target="_blank" rel="noopener noreferrer">
+        Explore on GitHub ↗
+      </a>
+      <p><small>
+        This project is for educational purposes and is not a substitute
+        for individualized coaching or medical advice.
+      </small></p>
+    </section>
+  </main>
+
+  <footer>
+    Adaptive Triathlon Training Planner · Personal Engineering Project
+  </footer>
+</body>
+</html>
